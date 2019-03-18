@@ -1,4 +1,4 @@
 default: build
 
 build:
-	gcc unshare.c -u ./bin/unshare
+	gcc unshare.c -o ./bin/unshare
