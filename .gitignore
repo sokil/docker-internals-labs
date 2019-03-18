@@ -38,6 +38,7 @@
 
 # compiled files
 bin
+!bin/.gitkeep
 
 # Debug files
 *.dSYM/
