@@ -1,4 +1,4 @@
-# docker-internals-labs
+# Research of process containerisation
 
 ```
 # In one terminal:
