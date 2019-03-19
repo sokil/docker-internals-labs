@@ -2,33 +2,23 @@
  * Presentation:
  * https://www.youtube.com/watch?v=hdVNKmru3LM&feature=youtu.be
  *
- * Capabilities:
- * https://wiki.archlinux.org/index.php/capabilities
+ * Privileges and access restrictions:
+ * Capabilities: https://wiki.archlinux.org/index.php/capabilities
+ * Chroot: http://man7.org/linux/man-pages/man2/chroot.2.html
+ * 
+ * Resource limiting:
+ * CGroups: https://en.wikipedia.org/wiki/Cgroups
  *
- * CGroups:
- * https://en.wikipedia.org/wiki/Cgroups
+ * Process isolation:
+ * Namespaces: https://en.wikipedia.org/wiki/Linux_namespaces
+ * Unshare: http://man7.org/linux/man-pages/man2/unshare.2.html
+ * Veth (Virtual Ethernet devices): http://man7.org/linux/man-pages/man4/veth.4.html
  *
- * Namespaces:
- * https://en.wikipedia.org/wiki/Linux_namespaces
- *
- * Veth (Virtual Ethernet devices):
- * http://man7.org/linux/man-pages/man4/veth.4.html
- *
- * Aufs (advanced multi-layered unification filesystem):
- * https://en.wikipedia.org/wiki/Aufs
- *
- * Overlay filesystem:
- * https://wiki.archlinux.org/index.php/Overlay_filesystem
- *
- * Unshare:
- * http://man7.org/linux/man-pages/man2/unshare.2.html
- *
- * Mount and umount:
- * http://man7.org/linux/man-pages/man2/mount.2.html
- * http://man7.org/linux/man-pages/man2/umount.2.html
- *
- * Chroot:
- * http://man7.org/linux/man-pages/man2/chroot.2.html
+ * File systems:
+ * Aufs (advanced multi-layered unification filesystem): https://en.wikipedia.org/wiki/Aufs
+ * Overlay filesystem: https://wiki.archlinux.org/index.php/Overlay_filesystem
+ * Mount: http://man7.org/linux/man-pages/man2/mount.2.html
+ * Umount: http://man7.org/linux/man-pages/man2/umount.2.html
  */
 
 #define _GNU_SOURCE
