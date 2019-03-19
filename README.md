@@ -13,3 +13,7 @@ unshare(21143)───bash(21144)
 
 $ ./bin/connect 21144 /bin/bash
 ```
+
+Useful links:
+
+* https://linuxcontainers.org/
