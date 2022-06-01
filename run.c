@@ -31,6 +31,8 @@
 
 int main(int argc, char *argv[])
 {
+    printf("[run] Start execution\n");
+
     int unshared = unshare(
       CLONE_NEWIPC |  // IPC namespace
       CLONE_NEWNS |   // mount namespace
@@ -46,7 +48,9 @@ int main(int argc, char *argv[])
 
     // fork process
     if (fork()) {
+      printf("[run] Parent process forked, waiting\n");
       wait(NULL);
+      printf("[run] Parent process exit\n");
       exit(EXIT_SUCCESS);
     }
 
@@ -61,5 +65,7 @@ int main(int argc, char *argv[])
     );
 
     // exec program
+    printf("[run] Child process execute start\n");
     execvp(argv[optind], &argv[optind]);
+    printf("[run] Child process execute end\n");
 }

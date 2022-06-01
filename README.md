@@ -4,16 +4,16 @@
 
 ```
 # In one terminal:
-$ ./bin/unshare /bin/bash
+$ ./bin/run /bin/bash
 
 # In other terminal
-$ ps aux | grep unshared
-sokil    21143  0.0  0.0   4308   676 pts/5    S    23:34   0:00 ./bin/unshare /bin/bash
+$ ps aux | grep ./bin/run
+sokil      42346  0.0  0.0   2640   940 pts/7    S    18:45   0:00 ./bin/run /bin/bash
 
-$ pstree -p 21143
-unshare(21143)───bash(21144)
+$ pstree -p 42346
+run(42346)───bash(42347)
 
-$ ./bin/connect 21144 /bin/bash
+$ ./bin/exec 42347 /bin/bash
 ```
 
 ## Useful links

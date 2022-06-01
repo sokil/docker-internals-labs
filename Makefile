@@ -1,5 +1,6 @@
 default: build
 
 build:
-	gcc unshare.c -o ./bin/unshare
-	gcc connect.c -o ./bin/connect
+	if [ ! -d ./bin ]; then mkdir ./bin; fi
+	gcc run.c -o ./bin/run
+	gcc exec.c -o ./bin/exec

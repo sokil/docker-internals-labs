@@ -1,5 +1,5 @@
 #define _GNU_SOURCE
-#include <sched.h>      // unshaer
+#include <sched.h>      // unshare
 #include <unistd.h>     // fork
 #include <sys/wait.h>   // wait
 #include <fcntl.h>
@@ -8,6 +8,7 @@
 
 int main(int argc, char *argv[])
 {
+    printf("[exec] Start execution\n");
     int pid = atoi(argv[1]);
 
     // connect to proc namespace
@@ -30,10 +31,14 @@ int main(int argc, char *argv[])
 
     // fork process
     if (fork()) {
+      printf("[exec] Parent process forked, waiting\n");
       wait(NULL);
+      printf("[exec] Parent process exit\n");
       exit(EXIT_SUCCESS);
     }
 
     // exec program
+    printf("[exec] Child process execute start\n");
     execl(argv[2], argv[2], NULL);
+    printf("[exec] Child process execute end\n");
 }
