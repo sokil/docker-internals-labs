@@ -22,7 +22,7 @@
  */
 
 #define _GNU_SOURCE
-#include <sched.h>      // unshaer
+#include <sched.h>      // unshare
 #include <unistd.h>     // fork
 #include <sys/wait.h>   // wait
 #include <sys/mount.h>  // mount

@@ -8,8 +8,11 @@
 
 int main(int argc, char *argv[])
 {
-    printf("[exec] Start execution\n");
     int pid = atoi(argv[1]);
+
+    char str[80];
+    sprintf(str, "[exec] Connecting to pid: %d", pid);
+    puts(str);
 
     // connect to proc namespace
     char pathbuf[100];
